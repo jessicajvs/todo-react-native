@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO } from '../actions';
+import { ADD_TODO, TOGGLE_TODO, UPTADE_TODO } from '../actions';
 
 let nextId = 1;
 
@@ -19,7 +19,14 @@ const todoListReducer = (state = [], action) => {
 					};
 				}
 				return todo;
-			})
+			});
+		case UPTADE_TODO:
+			return state.map(todo => {
+				if(todo.id === action.todo.id){
+					return action.todo;
+				}
+				return todo;
+			});
 		default:
 			return state;
 	}
