@@ -24,4 +24,5 @@ const todoListReducer = (state = [], action) => {
 			return state;
 	}
 };
+
 export default todoListReducer;
