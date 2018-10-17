@@ -5,7 +5,7 @@ const TodoListItem = ({ todo, onPressTodo }) => (
 	<TouchableOpacity onPress={onPressTodo}>
 		<View style={styles.line}>
 			<Text style={[
-				styles.lineText
+				styles.lineText,
 				todo.done ? styles.lineThrough : null
 				]}>
 				{ todo.text }
